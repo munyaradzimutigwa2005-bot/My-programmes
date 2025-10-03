@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Program Tour - Health Sciences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef3f8;
+      padding: 30px;
+    }
+    h1, h2, h3 {
+      color: #2a4d69;
+    }
+    .program, .apparatus {
+      background: #ffffff;
+      padding: 15px;
+      margin: 15px 0;
+      border-left: 5px solid #2a4d69;
+      border-radius: 5px;
+    }
+    #welcome {
+      background-color: #d6e6f2;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    .apparatus img {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .apparatus-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="welcome">
+    <h2>Welcome, <span id="studentName"></span>!</h2>
+    <p>Explore our undergraduate programs and the tools you will work with in the Faculty of Medicine and Health Sciences.</p>
+  </div>
+
+  <!-- Program Tour Section -->
+  <div class="program">
+    <h3>Bachelor of Medicine and Bachelor of Surgery (MBBS)</h3>
+    <p>Duration: 5-6 years | Prepares you for a career as a doctor with multiple specialties.</p>
+  </div>
+
+  <div class="program">
+    <h3>Bachelor of Science in Nursing</h3>
+    <p>Duration: 4 years | Learn critical care, community nursing, and leadership skills.</p>
+  </div>
+
+  <div class="program">
+    <h3>Bachelor of Pharmacy</h3>
+    <p>Duration: 4 years | Focus on drug development, pharmacology, and clinical pharmacy practice.</p>
+  </div>
+
+  <div class="program">
+    <h3>Bachelor of Medical Laboratory Science</h3>
+    <p>Duration: 4 years | Explore diagnostics, pathology, microbiology, and lab management.</p>
+  </div>
+
+  <!-- Apparatus Section -->
+  <div class="apparatus">
+    <h3>Laboratory and Medical Apparatus You Will Use</h3>
+    <div class="apparatus-container">
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Stethoscope-2.png" alt="Stethoscope">
+        <p>Stethoscope</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Light_Microscope.jpg" alt="Microscope">
+        <p>Light Microscope</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Centrifuge_Laboratory.jpg" alt="Centrifuge">
+        <p>Centrifuge</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Blood_Pressure_Meter.jpg" alt="Blood Pressure Monitor">
+        <p>Blood Pressure Monitor</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Graduated_Cylinder.png" alt="Graduated Cylinder">
+        <p>Graduated Cylinder</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Load student data from localStorage
+    const name = localStorage.getItem("studentName") || "Student";
+    document.getElementById("studentName").innerText = name;
+  </script>
+
+</body>
+</html>
